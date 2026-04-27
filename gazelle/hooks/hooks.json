@@ -1,0 +1,17 @@
+{
+  "description": "Gazelle safety hooks — warns when editing sensitive context-training or state files",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/gazelle-safety.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

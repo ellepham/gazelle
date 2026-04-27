@@ -1,0 +1,11 @@
+{
+  "name": "gazelle-toolkit",
+  "owner": { "name": "gazelle-toolkit" },
+  "plugins": [
+    {
+      "name": "gazelle",
+      "source": "./gazelle",
+      "description": "Product design & service design agent. Discovery sprints, multi-source research, personas, journey mapping, specs, design critique. Run /setup to configure for your company."
+    }
+  ]
+}

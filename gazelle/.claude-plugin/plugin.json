@@ -1,0 +1,8 @@
+{
+  "name": "gazelle",
+  "version": "3.0.0",
+  "description": "Product design & service design agent. Runs discovery sprints, researches across Notion/Slack/analytics/Figma, builds data-grounded personas, maps user journeys, writes specs, and critiques designs.\n\nSetup: Run /setup to configure for your company. Then go to Customize → Connectors and click Install on each connector (requires one-time OAuth).",
+  "author": {
+    "name": "Elle Pham"
+  }
+}

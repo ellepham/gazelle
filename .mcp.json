@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "Atlassian": {
+      "type": "http",
+      "url": "https://atlassian.mcp.claude.com/mcp"
+    },
+    "Slack": {
+      "type": "http",
+      "url": "https://slack.mcp.claude.com/mcp"
+    },
+    "Figma": {
+      "type": "http",
+      "url": "https://figma.mcp.claude.com/mcp"
+    },
+    "Google Drive": {
+      "type": "http",
+      "url": "https://gdrive.mcp.claude.com/mcp"
+    },
+    "Circleback": {
+      "type": "http",
+      "url": "https://app.circleback.ai/api/mcp"
+    },
+    "Gmail": {
+      "type": "http",
+      "url": "https://gmail.mcp.claude.com/mcp"
+    },
+    "Google Calendar": {
+      "type": "http",
+      "url": "https://gcal.mcp.claude.com/mcp"
+    }
+  }
+}
