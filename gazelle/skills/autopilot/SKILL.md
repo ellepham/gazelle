@@ -93,15 +93,30 @@ Reserved:            last 15min for handoff
 
 ### Step 3: Auto-Generate Tasks (When Queue Empties)
 
-Scan these sources to generate concrete tasks (each: deliverable + file path + estimated duration):
+Generate concrete tasks (each: deliverable + file path + estimated duration). **Source priority matches Step 2 — A before B before C.**
 
-1. Project README files — stale docs, missing sections
-2. Recent `git log` on active repos — work without summaries
-3. Open issues / TODOs in code
-4. Wiki / docs gaps (orphaned pages, missing summaries)
-5. Test coverage gaps
-6. Stale dependencies / TODO markers
-7. Any persistent "task queue" file in the project
+**A. Prompt + session context (primary — try this first)**
+
+1. Re-read the user's original prompt — what specific verbs/nouns/constraints?
+2. Scan the prior session transcript for TODOs, "I'll do X next" statements, links the user shared but didn't act on, partial work
+3. Tier 2 depth on the prompt's topic: citations, edge cases, failure modes
+4. Tier 3 derivative on the prompt's topic: alternatives, stakeholder views, "what would make this 2x better"
+
+**B. Adjacent project state (only when A is exhausted)**
+
+5. Active project folders related to the prompt's topic — open specs, partial drafts, related issues/tickets
+6. Recent commits in repos the prompt touches (`git log --oneline -20`) — work without summaries
+
+**C. Generic auto-gen (last resort — A + B both exhausted, OR prompt was "general maintenance" / "do good work")**
+
+7. Project README files — stale docs, missing sections
+8. Open issues / TODOs in code
+9. Wiki / docs gaps (orphaned pages, missing summaries)
+10. Test coverage gaps
+11. Stale dependencies / TODO markers
+12. Any persistent "task queue" file in the project
+
+**If A is exhausted before timer fires:** that's a real signal. Wrap up honestly with a status report; don't fall to C just to fill time. Filling time with off-topic work is the silent-failure mode this skill exists to prevent.
 
 ### Step 4: Execute
 
